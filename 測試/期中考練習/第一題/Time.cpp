@@ -16,7 +16,7 @@ void Time::setTime(int h, int m, int s)
     }
     else
     {
-        throw invalid_argument("超出範圍了");
+        throw invalid_argument("error");
     }
 }
 
