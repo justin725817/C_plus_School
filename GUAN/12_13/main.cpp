@@ -14,7 +14,7 @@ int main(){
    SavingsAccount account1( 25.00, .03 ); // create SavingsAccount object
    CheckingAccount account2( 80.0, 1.0 ); // create CheckingAccount object
    SavingsAccount account3( 200, .03 ); // create SavingsAccount object
-   CheckingAccount account4( 80.0, 0.5 ); // create CheckingAccount object
+   CheckingAccount account4( 400.0, 0.5 ); // create CheckingAccount object
 
    //創立一個vector陣列，裡面儲存變數種類為 Accont的class指標
    //詳情請見:https://ithelp.ithome.com.tw/articles/10304440?sc=iThelpR
