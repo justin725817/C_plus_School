@@ -7,5 +7,6 @@ int main (){
 
     enum class Status {CONTINUE, WON, LOST};
 
+    int a;
     
 }
