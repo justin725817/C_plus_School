@@ -3,11 +3,12 @@
 
 #include <iostream>
 #include <sstream>
+#include "Time.h"
 using namespace std;
-class Date
+class Date: public Time
 {
 public:
-   Date( int MM = 1, int DD = 1, int YY = 1900); // default constructor
+   Date( int MM = 1, int DD = 1, int YY = 1900,int h=0,int m=0,int s=0); // default constructor
    void setDate( int MM, int DD, int YY); // set month, day, year
    void setDay(int DD);
    void setMonth(int MM); 

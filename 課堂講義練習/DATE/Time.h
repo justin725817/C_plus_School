@@ -2,13 +2,14 @@
 #define TIME_H
 #include <iostream>
 #include <sstream>
+#include "Date.h"
 using namespace std;
 
 //Time class
-class Time
+class Time: public Date
 { 
 public:
-     	Time(int h=0, int m=0, int s=0);
+     	Time(int h=0, int m=0, int s=0,int MM=1,int DD=1,int YY=1990);
       	void setTime(int h, int m, int s);
       	int getHour();
       	int getMinute(); 
