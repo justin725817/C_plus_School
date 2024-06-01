@@ -4,19 +4,23 @@
 #include <stdexcept>
 #include <sstream>
 #include "CommissionEmployee.h" // CommissionEmployee class definition
+#include "Employee.h"
 using namespace std;
 
-// constructor 
+// constructor
 CommissionEmployee::CommissionEmployee(const string &first,
-   const string &last, const string &ssn, double sales, double rate)
-   : Employee(first, last, ssn) {
+                                       const string &last, const string &ssn, int month, int day, int year, double sales, double rate)
+    : Employee(first, last, ssn, month, day, year)
+{
    setGrossSales(sales);
    setCommissionRate(rate);
 }
 
 // set gross sales amount
-void CommissionEmployee::setGrossSales(double sales) {
-   if (sales < 0.0) {
+void CommissionEmployee::setGrossSales(double sales)
+{
+   if (sales < 0.0)
+   {
       throw invalid_argument("Gross sales must be >= 0.0");
    }
 
@@ -27,8 +31,10 @@ void CommissionEmployee::setGrossSales(double sales) {
 double CommissionEmployee::getGrossSales() const { return grossSales; }
 
 // set commission rate
-void CommissionEmployee::setCommissionRate(double rate) {
-   if (rate <= 0.0 || rate > 1.0) {
+void CommissionEmployee::setCommissionRate(double rate)
+{
+   if (rate <= 0.0 || rate > 1.0)
+   {
       throw invalid_argument("Commission rate must be > 0.0 and < 1.0");
    }
 
@@ -36,36 +42,24 @@ void CommissionEmployee::setCommissionRate(double rate) {
 }
 
 // return commission rate
-double CommissionEmployee::getCommissionRate() const {
+double CommissionEmployee::getCommissionRate() const
+{
    return commissionRate;
 }
 
 // calculate earnings; override pure virtual function earnings in Employee
-double CommissionEmployee::earnings() const {
+double CommissionEmployee::earnings() const
+{
    return getCommissionRate() * getGrossSales();
 }
 
-// return a string representation of CommissionEmployee's information 
-string CommissionEmployee::toString() const {
+// return a string representation of CommissionEmployee's information
+string CommissionEmployee::toString() const
+{
    ostringstream output;
    output << fixed << setprecision(2);
    output << "commission employee: " << Employee::toString()
-      << "\ngross sales: " << getGrossSales()
-      << "; commission rate: " << getCommissionRate();
+          << "\ngross sales: " << getGrossSales()
+          << "; commission rate: " << getCommissionRate();
    return output.str();
 }
-
-/**************************************************************************
- * (C) Copyright 1992-2017 by Deitel & Associates, Inc. and               *
- * Pearson Education, Inc. All Rights Reserved.                           *
- *                                                                        *
- * DISCLAIMER: The authors and publisher of this book have used their     *
- * best efforts in preparing the book. These efforts include the          *
- * development, research, and testing of the theories and programs        *
- * to determine their effectiveness. The authors and publisher make       *
- * no warranty of any kind, expressed or implied, with regard to these    *
- * programs or to the documentation contained in these books. The authors *
- * and publisher shall not be liable in any event for incidental or       *
- * consequential damages in connection with, or arising out of, the       *
- * furnishing, performance, or use of these programs.                     *
- **************************************************************************/

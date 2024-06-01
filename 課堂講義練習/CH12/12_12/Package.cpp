@@ -69,7 +69,7 @@ int Package::getSenderZIP() const {
 
 // set recipient's name
 void Package::setRecipientName(const string& name) {
-    recipientName = name;
+   recipientName = name;
 } 
 
 // return recipient's name
