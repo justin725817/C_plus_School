@@ -11,6 +11,7 @@
 #include "SalariedEmployee.h"
 #include "CommissionEmployee.h"
 #include "BasePlusCommissionEmployee.h"
+
 using namespace std;
 
 int determineMonth(); // prototype of function that returns current month

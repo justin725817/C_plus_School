@@ -1,4 +1,5 @@
 // Tool.h
+// Class Tool definition for hardware store program.
 #ifndef TOOL_H
 #define TOOL_H
 

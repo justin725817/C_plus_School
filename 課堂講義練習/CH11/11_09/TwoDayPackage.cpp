@@ -9,8 +9,8 @@ using namespace std;
 TwoDayPackage::TwoDayPackage(const string &name, const string &address,
                             const string &city, const string &state, int zip, const string &R_name,
                             const string &R_address, const string &R_city, const string &R_state,
-                            int R_zip, double weight, double COP, double flatfee)
-    : Package(name, address, city, state, zip, R_name, R_address, R_city, R_state, R_zip, weight, COP)
+                            int R_zip, double weight, double CPO, double flatfee)
+    : Package(name, address, city, state, zip, R_name, R_address, R_city, R_state, R_zip, weight, CPO)
 {
     setFlatFee(flatfee);
 }

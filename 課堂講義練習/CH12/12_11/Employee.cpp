@@ -3,6 +3,7 @@
 // Note: No definitions are given for pure virtual functions.
 #include <sstream>
 #include "Employee.h" // Employee class definition
+
 using namespace std;
 
 // constructor
